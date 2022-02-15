@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100;1,700&display=swap');
+
+*{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.content{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index: 1000;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.title{
+    font-weight: 700;
+    color: #fff;
+    pointer-events: none;
+}
+
+.nav{
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.middle,
+.middle ul{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.middle ul{
+    font-weight: 700;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.middle ul li{
+    padding: 0 4rem;
+}
+
+.middle ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.middle ul li a:hover{
+    color:rgb(230, 230, 230);
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+button i {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+button:nth-of-type(2) i{
+    font-size: 1rem;
+}
+
+.bottom-text{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.bars{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.left-bar,
+.right-bar{
+    background-color: #fff;
+    width: 1px;
+    height: 500px;
+}
+
+.left-bar{
+    margin-left: 7.2rem;
+}
+
+.right-bar{
+    margin-right: 7.2rem;
+}
+
+.bottom-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.h-bars{
+    margin-top: 30px;
+    height: 100px;
+}
+
+
+.center-bar{
+    width: 100px;
+    height: 1px;
+    background-color: rgba(70, 70, 70, .4);
+    margin-bottom: 20px;
+    position:relative;
+    animation: hide 6s ease-in-out infinite;
+}
+
+.center-bar::before{
+    content:'';
+    position:absolute;
+    top:20px;
+    left:15px;
+    width:70px;
+    height:1px;
+    background-color: rgba(70, 70, 70, .4);
+    animation: hide 6s 1s ease-in-out infinite;
+}
+
+.center-bar::after{
+    content:'';
+    position:absolute;
+    top:40px;
+    left:23px;
+    width:54px;
+    height:1px;
+    background-color: rgba(70, 70, 70, .4);
+    animation: hide 6s 2s ease-in-out infinite;
+}
+
+@keyframes hide {
+    0% {
+        background-color: rgba(70, 70, 70, .4);
+    }
+    50% {
+        background-color: rgba(70, 70, 70, .4);
+    }
+    80% {
+        background-color: rgba(70, 70, 70, 1);
+    }
+    100% {
+        background-color: rgba(70, 70, 70, .4);
+    }
+}
